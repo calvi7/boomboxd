@@ -1,26 +1,9 @@
 import 'dart:ui';
 
-import 'package:app/constants.dart';
 import 'package:flutter/material.dart';
 
-class GetStartedView extends StatelessWidget {
-  const GetStartedView({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        _Background(
-          sigma: 1.5,
-          color: AppColors.mainColor,
-        ),
-      ],
-    );
-  }
-}
-
-class _Background extends StatelessWidget {
-  const _Background({
+class GetStartedBackground extends StatelessWidget {
+  const GetStartedBackground({
     Key? key,
     required this.sigma,
     required this.color,
@@ -36,7 +19,7 @@ class _Background extends StatelessWidget {
         Container(
           color: color,
         ),
-        FadedWidget(
+        _FadedWidget(
           fadeColor: color,
           image: Image.asset("assets/drake-cover.png"),
         ),
@@ -56,8 +39,8 @@ class _Background extends StatelessWidget {
   }
 }
 
-class FadedWidget extends StatelessWidget {
-  const FadedWidget({
+class _FadedWidget extends StatelessWidget {
+  const _FadedWidget({
     Key? key,
     required this.image,
     required this.fadeColor,

@@ -8,3 +8,7 @@ class AppColors {
   static Color green = const Color(0xff00AA44);
   static Color blue = const Color(0xff088DD8);
 }
+
+class AppStrings {
+  static String slogan = "Share the songs you love with the people you love";
+}
