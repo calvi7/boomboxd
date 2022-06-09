@@ -1,6 +1,6 @@
-import 'package:app/constants.dart';
-import 'package:app/ui/views/get_started_view/started_slogan.dart';
-import 'package:app/widgets/app_entry_button.dart';
+import '/constants.dart';
+import '/ui/views/get_started_view/started_slogan.dart';
+import '/widgets/app_entry_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../../widgets/app_logo.dart';
