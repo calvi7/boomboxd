@@ -1,12 +1,12 @@
-import 'package:boomboxd/ui/views/get_started_view/get_started_view.dart';
 import 'package:flutter/material.dart';
 
+import 'started_slogan.dart';
+import 'get_started_view.dart';
+
 import '/ui/views/login_view/login_view.dart';
+
+import '/widgets/widgets.dart';
 import '/constants.dart';
-import '/ui/views/get_started_view/started_slogan.dart';
-import '/widgets/app_entry_button.dart';
-import '/widgets/animated_router.dart';
-import '/widgets/app_logo.dart';
 
 class GetStartedBody extends StatelessWidget {
   const GetStartedBody({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class GetStartedBody extends StatelessWidget {
       children: [
         Container(),
         Container(),
-        const AppLogo(),
+        const LogoHero(),
         StartViewSlogan(slogan: AppStrings.slogan),
         AppEntryButton(
           callback: () {
