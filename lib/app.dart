@@ -1,3 +1,4 @@
+import '/ui/views/login_view/login_view.dart';
 import 'package:flutter/material.dart';
 
 import 'ui/views/get_started_view/get_started_view.dart';
@@ -12,7 +13,8 @@ class App extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const GetStartedView(),
+      // home: const GetStartedView(),
+      home: const LoginView(),
     );
   }
 }

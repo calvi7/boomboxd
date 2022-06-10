@@ -1,4 +1,4 @@
-name: Boomboxd
+name: boomboxd
 description: A music reviewing app, where you can make custom lists and share them.
 
 # The following line prevents the package from being accidentally published to
