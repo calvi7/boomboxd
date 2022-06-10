@@ -12,8 +12,15 @@ class LoginForm extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const LoginTextFormField(),
-        const LoginTextFormField(isPassword: true),
+        const LoginTextFormField(
+          hint: "Username",
+          icon: Icons.person_rounded,
+        ),
+        const LoginTextFormField(
+          hint: "Password",
+          icon: Icons.lock_rounded,
+          isPassword: true,
+        ),
         const _ForgotPasswordButton(),
         const SizedBox(height: 30),
         AppEntryButton(

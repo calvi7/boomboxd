@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 class LoginTextFormField extends StatelessWidget {
   const LoginTextFormField({
     Key? key,
+    required this.hint,
     this.isPassword = false,
+    required this.icon,
   }) : super(key: key);
 
+  final String hint;
   final bool isPassword;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +23,11 @@ class LoginTextFormField extends StatelessWidget {
       ),
       child: TextFormField(
         decoration: InputDecoration(
+          prefixIcon: Icon(
+            icon,
+            color: Colors.white,
+          ),
+          hintText: hint,
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
             borderSide: BorderSide(
@@ -27,19 +36,16 @@ class LoginTextFormField extends StatelessWidget {
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
-            borderSide: BorderSide(
-              color: AppColors.green,
-            ),
           ),
           fillColor: AppColors.grey,
           isDense: true,
           filled: true,
         ),
         style: const TextStyle(
-          fontSize: 20,
+          fontSize: 14,
           color: Colors.white,
         ),
-        textAlign: TextAlign.center,
+        textAlign: TextAlign.left,
         obscureText: isPassword,
       ),
     );
