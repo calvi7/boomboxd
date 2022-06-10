@@ -18,11 +18,11 @@ class GetStartedBody extends StatelessWidget {
       children: [
         Container(),
         Container(),
-        const LogoHero(),
+        const AppLogo(),
         StartViewSlogan(slogan: AppStrings.slogan),
         AppEntryButton(
           callback: () {
-            Navigator.of(context).push(
+            Navigator.of(context).pushReplacement(
               AnimatedRouter.route(
                 const GetStartedView(),
                 const LoginView(),

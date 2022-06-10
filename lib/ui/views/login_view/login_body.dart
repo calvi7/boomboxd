@@ -9,7 +9,7 @@ class LoginBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: const [
         AppLogo(),
         LoginForm(),

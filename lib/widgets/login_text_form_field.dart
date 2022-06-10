@@ -12,31 +12,34 @@ class LoginTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 16,
-        horizontal: 64,
+      padding: const EdgeInsets.only(
+        top: 32,
+        left: 64,
+        right: 64,
       ),
       child: TextFormField(
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 20,
-          color: Colors.white,
-        ),
         decoration: InputDecoration(
-          isDense: true,
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(30),
             borderSide: BorderSide(
               color: AppColors.thirdColor,
             ),
           ),
-          hoverColor: Colors.grey,
-          filled: true,
-          focusColor: Colors.grey,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(
+              color: AppColors.green,
+            ),
           ),
+          fillColor: AppColors.grey,
+          isDense: true,
+          filled: true,
         ),
+        style: const TextStyle(
+          fontSize: 20,
+          color: Colors.white,
+        ),
+        textAlign: TextAlign.center,
         obscureText: isPassword,
       ),
     );

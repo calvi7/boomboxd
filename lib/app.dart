@@ -13,7 +13,7 @@ class App extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const LoginView(),
+      home: const GetStartedView(),
       // home: const GetStartedView(),
     );
   }

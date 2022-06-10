@@ -9,14 +9,47 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    return Container(
-      height: height * 0.4,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const LoginTextFormField(),
+        const LoginTextFormField(isPassword: true),
+        const _ForgotPasswordButton(),
+        const SizedBox(height: 30),
+        AppEntryButton(
+          callback: () {
+            Navigator.of(context).pushReplacement(
+              AnimatedRouter.route(
+                const LoginView(),
+                const GetStartedView(),
+              ),
+            );
+          },
+          text: "Login",
+        ),
+        const SizedBox(height: 30),
+        TextButton(
+          style: TextButton.styleFrom(
+            primary: AppColors.secondaryColor,
+          ),
+          onPressed: () {},
+          child: const Text("Don't have an account? Please Sign Up first"),
+        ),
+      ],
+    );
+  }
+}
+
+class _ForgotPasswordButton extends StatelessWidget {
+  const _ForgotPasswordButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 64),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const LoginTextFormField(),
-          const LoginTextFormField(isPassword: true),
           TextButton(
             style: TextButton.styleFrom(
               backgroundColor: Colors.transparent,
@@ -24,24 +57,6 @@ class LoginForm extends StatelessWidget {
             ),
             onPressed: () {},
             child: const Text("Forgot Password?"),
-          ),
-          AppEntryButton(
-              callback: () {
-                Navigator.of(context).pushReplacement(
-                  AnimatedRouter.route(
-                    const LoginView(),
-                    const HomeView(),
-                  ),
-                );
-              },
-              text: "Login"),
-          TextButton(
-            style: TextButton.styleFrom(
-              backgroundColor: Colors.transparent,
-              primary: AppColors.secondaryColor,
-            ),
-            onPressed: () {},
-            child: const Text("Don't have an account? Please Sign Up first"),
           ),
         ],
       ),

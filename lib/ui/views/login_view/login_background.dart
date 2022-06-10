@@ -19,7 +19,7 @@ class LoginBackground extends StatelessWidget {
           ),
           child: const Image(
             fit: BoxFit.cover,
-            image: AssetImage("album-wp.jpg"),
+            image: AssetImage("assets/album-collage.jpg"),
           ),
         ),
         const _SlopedBoxContainer(),
