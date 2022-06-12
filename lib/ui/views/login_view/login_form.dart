@@ -1,40 +1,50 @@
 import 'package:flutter/material.dart';
 
+import '/ui/views/views.dart';
 import '/constants.dart';
 import '/widgets/widgets.dart';
-import '/ui/views/views.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({Key? key}) : super(key: key);
+  LoginForm({Key? key}) : super(key: key);
+
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const LoginTextFormField(
+        // here be username
+        LoginTextFormField(
+          controller: usernameController,
           hint: "Username",
           icon: Icons.person_rounded,
         ),
-        const LoginTextFormField(
+        // here be password
+        LoginTextFormField(
+          controller: passwordController,
           hint: "Password",
           icon: Icons.lock_rounded,
           isPassword: true,
         ),
+        // forgot password?
         const _ForgotPasswordButton(),
         const SizedBox(height: 30),
+        // LOGIN
         AppEntryButton(
           callback: () {
-            Navigator.of(context).pushReplacement(
-              AnimatedRouter.route(
-                const LoginView(),
-                const GetStartedView(),
-              ),
+            var route = AnimatedRouter.route(
+              const LoginView(),
+              const GetStartedView(),
             );
+
+            Navigator.of(context).pushReplacement(route);
           },
           text: "Login",
         ),
         const SizedBox(height: 30),
+        // Sign Up
         TextButton(
           style: TextButton.styleFrom(
             primary: AppColors.secondaryColor,

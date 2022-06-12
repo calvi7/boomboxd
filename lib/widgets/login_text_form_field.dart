@@ -5,13 +5,15 @@ class LoginTextFormField extends StatelessWidget {
   const LoginTextFormField({
     Key? key,
     required this.hint,
-    this.isPassword = false,
     required this.icon,
+    required this.controller,
+    this.isPassword = false,
   }) : super(key: key);
 
   final String hint;
   final bool isPassword;
   final IconData icon;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,7 @@ class LoginTextFormField extends StatelessWidget {
         right: 64,
       ),
       child: TextFormField(
+        controller: controller,
         decoration: InputDecoration(
           prefixIcon: Icon(
             icon,
@@ -34,9 +37,7 @@ class LoginTextFormField extends StatelessWidget {
               color: AppColors.thirdColor,
             ),
           ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30),
-          ),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
           fillColor: AppColors.grey,
           isDense: true,
           filled: true,

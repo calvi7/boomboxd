@@ -1,6 +1,7 @@
-import '/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '/constants.dart';
 
 class AppEntryButton extends StatelessWidget {
   const AppEntryButton({
@@ -8,9 +9,10 @@ class AppEntryButton extends StatelessWidget {
     required this.callback,
     required this.text,
     this.icon,
+    this.padding = const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
   }) : super(key: key);
 
-  final Padding? padding = const Padding(padding: EdgeInsets.all(8));
+  final EdgeInsetsGeometry padding;
   final VoidCallback callback;
   final String text;
   final Icon? icon;
@@ -18,8 +20,8 @@ class AppEntryButton extends StatelessWidget {
   Widget _buttonCenter() {
     final Widget textWidget = Text(
       text,
-      style: GoogleFonts.robotoMono(
-        fontSize: 14,
+      style: GoogleFonts.roboto(
+        fontSize: 16,
         fontWeight: FontWeight.bold,
       ),
     );
@@ -42,9 +44,9 @@ class AppEntryButton extends StatelessWidget {
       style: TextButton.styleFrom(
         primary: AppColors.mainColor,
         backgroundColor: AppColors.secondaryColor,
-        padding: const EdgeInsets.all(20),
+        padding: padding,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(24),
         ),
       ),
       onPressed: () => callback(),

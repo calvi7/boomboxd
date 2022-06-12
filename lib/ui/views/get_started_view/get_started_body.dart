@@ -18,7 +18,7 @@ class GetStartedBody extends StatelessWidget {
       children: [
         Container(),
         Container(),
-        const AppLogo(),
+        const LogoHero(),
         StartViewSlogan(slogan: AppStrings.slogan),
         AppEntryButton(
           callback: () {
