@@ -39,7 +39,7 @@ class HomeGreeting extends StatelessWidget {
       children: [
         _greet(username),
         Text(
-          "Review or track films you've watched",
+          "Review or track songs you've listened to",
           style: GoogleFonts.openSans(),
         ),
       ],

@@ -58,7 +58,14 @@ class LoginForm extends StatelessWidget {
         const SizedBox(height: 30),
         // LOGIN
         AppEntryButton(
-          callback: () {},
+          callback: () {
+            Navigator.of(context).pushReplacement(
+              AnimatedRouter.route(
+                const LoginView(),
+                HomeView(),
+              ),
+            );
+          },
           text: "Login",
         ),
         const SizedBox(height: 30),

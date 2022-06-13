@@ -1,10 +1,10 @@
-import 'package:boomboxd/ui/views/home_view/widgets/home_greeting.dart';
 import 'package:boomboxd/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
 import '/constants.dart';
 import '/widgets/widgets.dart';
 import '/core/models/models.dart';
+import 'widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({
@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
   }) : super(key: key);
 
   final User mockUser = User(
-    displayName: "Guy",
+    displayName: "Guybrush",
     handle: "guybrush_threepwood",
   );
 
@@ -30,11 +30,7 @@ class HomeView extends StatelessWidget {
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Column(
-              children: [
-                HomeGreeting(username: mockUser.displayName),
-              ],
-            ),
+            child: HomeViewBody(mockUser: mockUser),
           ),
         ),
       ),

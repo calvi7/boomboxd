@@ -6,24 +6,22 @@ class AppLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Icon(
-            CupertinoIcons.music_albums,
-            size: 42,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Icon(
+          CupertinoIcons.music_albums,
+          size: 42,
+        ),
+        const SizedBox(height: 10),
+        Text(
+          "Boomboxd. ",
+          textAlign: TextAlign.center,
+          style: GoogleFonts.robotoSerif(
+            fontSize: 24,
           ),
-          const SizedBox(height: 10),
-          Text(
-            "Boomboxd. ",
-            textAlign: TextAlign.center,
-            style: GoogleFonts.robotoSerif(
-              fontSize: 24,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
