@@ -1,15 +1,21 @@
+import 'package:boomboxd/ui/views/login_view/login_background.dart';
 import 'package:flutter/material.dart';
 
-class RegisterView extends StatelessWidget {
-  const RegisterView({
+import 'sign_up_body.dart';
+
+class SignUpView extends StatelessWidget {
+  const SignUpView({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Hola Mundo'),
+    return Scaffold(
+      body: Stack(
+        children: const [
+          LoginBackground(),
+          SignUpBody(),
+        ],
       ),
     );
   }

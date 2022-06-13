@@ -9,7 +9,7 @@ class AppEntryButton extends StatelessWidget {
     required this.callback,
     required this.text,
     this.icon,
-    this.padding = const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+    this.padding = const EdgeInsets.symmetric(horizontal: 36, vertical: 24),
   }) : super(key: key);
 
   final EdgeInsetsGeometry padding;

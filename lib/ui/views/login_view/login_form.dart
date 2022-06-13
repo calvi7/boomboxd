@@ -1,3 +1,4 @@
+import 'package:boomboxd/ui/views/sign_up_view/sign_up_view.dart';
 import 'package:flutter/material.dart';
 
 import '/ui/views/views.dart';
@@ -10,11 +11,36 @@ class LoginForm extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
+  RichText _SignUpText() {
+    return RichText(
+      text: TextSpan(
+        children: [
+          TextSpan(
+            text: "Don't have an account? Please ",
+            style: TextStyle(color: AppColors.secondaryColor),
+          ),
+          TextSpan(
+            text: "Sign Up ",
+            style: TextStyle(color: AppColors.thirdColor),
+          ),
+          TextSpan(
+            text: "first.",
+            style: TextStyle(color: AppColors.secondaryColor),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        const TitleSubtitleText(
+          title: "Login",
+          subtitle: "Please login to continue",
+        ),
         // here be username
         LoginTextFormField(
           controller: usernameController,
@@ -33,14 +59,7 @@ class LoginForm extends StatelessWidget {
         const SizedBox(height: 30),
         // LOGIN
         AppEntryButton(
-          callback: () {
-            var route = AnimatedRouter.route(
-              const LoginView(),
-              const GetStartedView(),
-            );
-
-            Navigator.of(context).pushReplacement(route);
-          },
+          callback: () {},
           text: "Login",
         ),
         const SizedBox(height: 30),
@@ -49,8 +68,14 @@ class LoginForm extends StatelessWidget {
           style: TextButton.styleFrom(
             primary: AppColors.secondaryColor,
           ),
-          onPressed: () {},
-          child: const Text("Don't have an account? Please Sign Up first"),
+          onPressed: () {
+            var route = AnimatedRouter.route(
+              const LoginView(),
+              const SignUpView(),
+            );
+            Navigator.of(context).pushReplacement(route);
+          },
+          child: _SignUpText(),
         ),
       ],
     );

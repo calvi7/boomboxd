@@ -20,8 +20,8 @@ class LoginTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(
         top: 32,
-        left: 64,
-        right: 64,
+        left: 48,
+        right: 48,
       ),
       child: TextFormField(
         controller: controller,

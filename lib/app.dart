@@ -1,7 +1,6 @@
-import '/ui/views/login_view/login_view.dart';
 import 'package:flutter/material.dart';
 
-import 'ui/views/get_started_view/get_started_view.dart';
+import 'ui/views/views.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -13,7 +12,7 @@ class App extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const GetStartedView(),
+      home: const SignUpView(),
       // home: const GetStartedView(),
     );
   }
