@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ui/views/views.dart';
+import '/ui/views/views.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const SignUpView(),
+      home: HomeView(),
       // home: const GetStartedView(),
     );
   }

@@ -1,9 +1,8 @@
-import 'package:boomboxd/ui/views/sign_up_view/sign_up_view.dart';
 import 'package:flutter/material.dart';
 
 import '/ui/views/views.dart';
-import '/constants.dart';
 import '/widgets/widgets.dart';
+import '/constants.dart';
 
 class LoginForm extends StatelessWidget {
   LoginForm({Key? key}) : super(key: key);

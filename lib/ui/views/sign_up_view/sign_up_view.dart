@@ -1,6 +1,6 @@
-import 'package:boomboxd/ui/views/login_view/login_background.dart';
 import 'package:flutter/material.dart';
 
+import '/ui/views/login_view/login_background.dart';
 import 'sign_up_body.dart';
 
 class SignUpView extends StatelessWidget {

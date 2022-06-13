@@ -1,7 +1,7 @@
-import 'package:boomboxd/ui/views/login_view/login_form.dart';
 import 'package:flutter/material.dart';
 
 import '/widgets/widgets.dart';
+import '/ui/views/login_view/login_form.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({Key? key}) : super(key: key);

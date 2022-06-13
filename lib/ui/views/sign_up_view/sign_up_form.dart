@@ -1,10 +1,9 @@
-import 'package:boomboxd/ui/views/login_view/login_view.dart';
-import 'package:boomboxd/ui/views/sign_up_view/sign_up_view.dart';
-import 'package:boomboxd/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
-import '../login_view/login_form.dart';
+import '/ui/views/login_view/login_view.dart';
+import '/ui/views/sign_up_view/sign_up_view.dart';
+import '/widgets/widgets.dart';
+import '/constants.dart';
 
 class SignUpForm extends StatelessWidget {
   SignUpForm({Key? key}) : super(key: key);
