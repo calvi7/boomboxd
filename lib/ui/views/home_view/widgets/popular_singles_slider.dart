@@ -29,8 +29,8 @@ class SongSlider extends StatelessWidget {
                     : "assets/drake-cover.png";
                 return Row(
                   children: [
-                    _SinglePoster(imgPath: imgPath),
-                    const SizedBox(width: 10),
+                    _SingleCover(imgPath: imgPath),
+                    SizedBox(width: 10.0 * index),
                   ],
                 );
               },
@@ -42,8 +42,8 @@ class SongSlider extends StatelessWidget {
   }
 }
 
-class _SinglePoster extends StatelessWidget {
-  const _SinglePoster({
+class _SingleCover extends StatelessWidget {
+  const _SingleCover({
     Key? key,
     required this.imgPath,
   }) : super(key: key);

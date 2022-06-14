@@ -1,4 +1,5 @@
 import 'package:boomboxd/ui/views/home_view/widgets/popular_singles_slider.dart';
+import 'package:boomboxd/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 import '/core/models/user.dart';
@@ -19,8 +20,10 @@ class HomeViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         HomeGreeting(username: mockUser.displayName),
-        const SizedBox(height: 10),
+        const SizedBox(height: 25),
         const SongSlider(),
+        const SizedBox(height: 35),
+        const UserMadeListOuter(),
       ],
     );
   }
